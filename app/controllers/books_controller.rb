@@ -29,6 +29,8 @@ class BooksController < ApplicationController
     if @book.update(book_params)
       flash[:notice] = 'Book was successfully updated'
       redirect_to book_path(@book)
+    else
+      render :edit
     end
   end
 
